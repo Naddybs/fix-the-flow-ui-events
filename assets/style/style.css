@@ -18,6 +18,13 @@ body {
   font-size: 2rem;
   background: var(--secondary);
 }
+h1{
+  color: var(--highlight-primary);
+  border-style: dotted ;
+  border-width: 5px;
+  padding: .3em;
+}
+
 section {
   max-width: 90vw;
 }
@@ -130,14 +137,14 @@ padding: 1em;
 /* button 5 */
 @keyframes shake {
   0% {
-    transform: rotate(0);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
 }
 .shake {
-  animation: roll 3s infinite;
+  animation: roll 2s infinite;
   transform: rotate(360deg);
   display: inline-block;
   opacity: .7;
@@ -146,22 +153,81 @@ padding: 1em;
 }
 /* button 6 */
 .flip {
-  transform: rotateY(40deg);
-  animation: two 2s infinite;
+  transform: rotateX(360deg);
+  animation:  1s infinite;
   animation-direction: alternate;
   background-color: hwb(330 13% 10%);
   transition: 1s .1s ease-in-out;
 }
-@keyframes flip {
-  0% {
-    transform: rotateY(0);
-  }
-  100% {
-    transform: rotateY(100deg);
-  }
-}
+
+/* Button 7 */
 .turn {
   transform: rotateY(180deg);
   transition: 1s .1s ease-in-out;
-  background-color: white;
+  background-color: #eaa65d;
 }
+/* button 8 */
+.popup{
+  align-items: center;
+  width: 500px; height: 400px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.popup img{
+  width: 100%;
+  height: 100%;
+}
+.popupshow{
+  display: flex; 
+  width: 500px;
+  height: 400px;
+
+}
+/* button 9 */
+.slide{
+  animation: slide 3s infinite;
+  background-color: greenyellow;
+}
+
+@keyframes slide{
+
+50%{
+  transform: translate(50px);
+}
+}
+
+/* button 10 */
+.color-change-animated {
+  animation: colorCycle 5s infinite;
+  color: black;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+@keyframes colorCycle {
+  0% {
+    background-color: #b434db;
+  }
+  25% {
+    background-color: hsl(185, 79%, 53%);
+  }
+  50% {
+    background-color: hsl(284, 85%, 23%);
+  }
+  75% {
+    background-color: hsl(312, 90%, 51%);
+  }
+  100% {
+    background-color: hsl(60, 83%, 52%);
+  }
+}
+
+.color-change-animated {
+  animation: colorCycle 5s infinite;
+  color: black;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  padding: 2em;
+  border-radius: 3em;
+}
+
