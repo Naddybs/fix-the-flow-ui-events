@@ -87,6 +87,7 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+/* button 1 */
 a:nth-of-type(1){
   color: var(--primary);
 }
@@ -151,13 +152,29 @@ padding: 1em;
   background-color: #720013;
   transition: 1s .1s ease-in-out;
 }
+@keyframes roll{
+0% {
+  transform: rotate(360deg);
+}
+100% {
+  transform: rotate(0);
+}
+}
 /* button 6 */
 .flip {
   transform: rotateX(360deg);
-  animation:  1s infinite;
+  animation: draaien 1s infinite;
   animation-direction: alternate;
   background-color: hwb(330 13% 10%);
   transition: 1s .1s ease-in-out;
+}
+@keyframes draaien {
+  0%{
+    transform: rotateX(360deg);
+  }
+  100%{
+    transform: rotateX(0);
+  }
 }
 
 /* Button 7 */
@@ -173,6 +190,9 @@ padding: 1em;
   display: none;
   position: absolute;
   z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 .popup img{
   width: 100%;
